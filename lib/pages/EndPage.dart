@@ -36,7 +36,7 @@ class EndPage extends StatelessWidget {
                             child: StartPage(),
                             childCurrent: this));
                   },
-                  child: const Text('Go To EndPage')),
+                  child: const Text('Go To StartPage')),
             ),
           ),          
         ],

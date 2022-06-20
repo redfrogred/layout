@@ -20,8 +20,16 @@ class StartPage extends StatelessWidget {
             ),
           ),
           Flexible(
-            child: Center(
-              child: ElevatedButton(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context,'/Page1');
+                  },
+                  child: const Text('EDEA Form 1'),
+                ),
+                ElevatedButton(
                   onPressed: () {
                     Navigator.push(
                         context,
@@ -34,7 +42,9 @@ class StartPage extends StatelessWidget {
                             child: EndPage(),
                             childCurrent: this));
                   },
-                  child: const Text('Go To EndPage')),
+                  child: const Text('Go To EndPage'),
+                ),                
+              ],
             ),
           ),
         ],
