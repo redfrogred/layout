@@ -5,14 +5,14 @@ import 'package:page_transition/page_transition.dart';
 import '../pages/_all.dart';
 import '../widgets/bottom_nav.dart';
 
-class Page1 extends StatefulWidget {
-  const Page1 ({Key? key}) : super(key: key);
+class Page2 extends StatefulWidget {
+  const Page2 ({Key? key}) : super(key: key);
 
   @override
-  State<Page1> createState() => _Page1State();
+  State<Page2> createState() => _Page2State();
 }
 
-class _Page1State extends State<Page1> {
+class _Page2State extends State<Page2> {
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
@@ -39,6 +39,7 @@ class _Page1State extends State<Page1> {
           ),
           child: Container(
             width: double.infinity,
+            color: Colors.transparent,
             child: Padding(
               padding: const EdgeInsets.fromLTRB(8,8,8,8),
               child: Column(
@@ -50,36 +51,31 @@ class _Page1State extends State<Page1> {
                   
                   
                   // start of BASICS
-                  InkWell(
-                    onTap: () {
-                      Utils.log('ink me!');
-                    },
-                    child: Container(
-                      color: Color(0xFF888888),
-                      child: Row(
-                        children: [
-                          Expanded(
-                            flex: 8,
-                            child: Container(
-                              color: Color(0xFF888888),
-                              child: Padding(
-                                padding: const EdgeInsets.fromLTRB(14,8,8,8),
-                                child: Text(
-                                  'Basics', style: TextStyle( fontSize: 18, color: Colors.white)),
-                              ))),
-                          Expanded(
-                            flex: 1,
-                            child: Container(
-                              alignment: Alignment.center,
-                              color: Colors.grey,
-                              child: Padding(
-                                padding: const EdgeInsets.fromLTRB(8,8,8,8),
-                                child: Text(
-                                  '>', style: TextStyle( fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white )),
-                              ))),
-                                      
-                        ],
-                      ),
+                  Container(
+                    color: const Color(0xFF888888),
+                    child: Row(
+                      children: [
+                        Expanded(
+                          flex: 8,
+                          child: Container(
+                            color: const Color(0xFF888888),
+                            child: const Padding(
+                              padding: EdgeInsets.fromLTRB(14,8,8,8),
+                              child: Text(
+                                'Basics', style: TextStyle( fontSize: 18, color: Colors.white)),
+                            ))),
+                        Expanded(
+                          flex: 1,
+                          child: Container(
+                            alignment: Alignment.center,
+                            color: Colors.transparent,
+                            child: const Padding(
+                              padding: EdgeInsets.fromLTRB(8,8,8,8),
+                              child: Text(
+                                ' ', style: TextStyle( fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white )),
+                            ))),
+                                    
+                      ],
                     ),
                   ),
                   // end of BASICS
@@ -94,18 +90,18 @@ class _Page1State extends State<Page1> {
                   Material(
                     color: const Color(0xcff888888),
                     child: InkWell(
-                      splashColor: Color(0xcffCCCCCC),
+                      splashColor: Color(0xcffcccccc),
                       onTap: () {
                         Utils.log('ink me!');
                       },
                       child: Container(
-                        //color: Color(0xFF888888),
+                        color: Colors.transparent,
                         child: Row(
                           children: [
                             Expanded(
                               flex: 8,
                               child: Container(
-                                //color: Colors.transparent,
+                                color: Colors.transparent,
                                 child: const Padding(
                                   padding: EdgeInsets.fromLTRB(14,8,8,8),
                                   child: Text(
@@ -117,9 +113,12 @@ class _Page1State extends State<Page1> {
                                 alignment: Alignment.center,
                                 //color: Colors.grey,
                                 child: const Padding(
-                                  padding: EdgeInsets.fromLTRB(8,8,8,8),
-                                  child: Text(
-                                    '>', style: TextStyle( fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white )),
+                                  padding: EdgeInsets.fromLTRB(4,8,16,8),
+                                  child: Icon(
+                                    Icons.arrow_right_outlined,
+                                    color: Colors.white,
+                                    size: 30.0,
+                                  ),
                                 ),
                                 decoration: const BoxDecoration(
                                   // color: Color(0xcffCCCCCC),
@@ -148,35 +147,52 @@ class _Page1State extends State<Page1> {
 
 
                   // start of FIRMWARE
-                  InkWell(
-                    onTap: () {
-                      Utils.log('ink me!');
-                    },
-                    child: Container(
-                      color: Color(0xFF888888),
-                      child: Row(
-                        children: [
-                          Expanded(
-                            flex: 8,
-                            child: Container(
-                              color: Color(0xFF888888),
-                              child: Padding(
-                                padding: const EdgeInsets.fromLTRB(14,8,8,8),
-                                child: Text(
-                                  'Firmware Update', style: TextStyle( fontSize: 18, color: Colors.white)),
-                              ))),
-                          Expanded(
-                            flex: 1,
-                            child: Container(
-                              alignment: Alignment.center,
-                              color: Colors.grey,
-                              child: Padding(
-                                padding: const EdgeInsets.fromLTRB(8,8,8,8),
-                                child: Text(
-                                  '>', style: TextStyle( fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white )),
-                              ))),
-                                      
-                        ],
+                  Material(
+                    color: const Color(0xcff888888),
+                    child: InkWell(
+                      splashColor: Color(0xcffcccccc),
+                      onTap: () {
+                        Utils.log('ink me!');
+                      },
+                      child: Container(
+                        color: Colors.transparent,
+                        child: Row(
+                          children: [
+                            Expanded(
+                              flex: 8,
+                              child: Container(
+                                color: Colors.transparent,
+                                child: const Padding(
+                                  padding: EdgeInsets.fromLTRB(14,8,8,8),
+                                  child: Text(
+                                    'Firmware Update', style: TextStyle( fontSize: 18, color: Colors.white)),
+                                ))),
+                            Expanded( 
+                              flex: 1,
+                              child: Container(
+                                alignment: Alignment.center,
+                                //color: Colors.grey,
+                                child: const Padding(
+                                  padding: EdgeInsets.fromLTRB(4,8,16,8),
+                                  child: Icon(
+                                    Icons.arrow_right_outlined,
+                                    color: Colors.white,
+                                    size: 30.0,
+                                  ),
+                                ),
+                                decoration: const BoxDecoration(
+                                  // color: Color(0xcffCCCCCC),
+                                  border: Border(  
+                                    left: BorderSide (
+                                      color: Color(0xcff777777),
+                                      width: 2,
+                                    )
+                                  )
+                                ),                                
+                              ),
+                            ),          
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -190,7 +206,7 @@ class _Page1State extends State<Page1> {
                       padding: EdgeInsets.fromLTRB(10,50,10,10),
                       child: Align(
                         alignment: Alignment.topLeft,
-                        child: Text('Page 1 -\nInkwell used for "Remote Unlock"...', 
+                        child: Text('Page 2 -\nthis one uses real icons for arrows...', 
                           style: TextStyle(
                             fontSize: 18,
                           ),

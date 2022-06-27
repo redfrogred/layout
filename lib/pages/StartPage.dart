@@ -16,7 +16,7 @@ class StartPage extends StatelessWidget {
         children: [
           const Flexible(
             child: Center(
-              child: Text('StartPage'),
+              child: Text('EDEA UI Examples'),
             ),
           ),
           Flexible(
@@ -27,8 +27,20 @@ class StartPage extends StatelessWidget {
                   onPressed: () {
                     Navigator.pushNamed(context,'/Page1');
                   },
-                  child: const Text('EDEA Form 1'),
+                  child: const Text('Pg 1'),
                 ),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context,'/Page2');
+                  },
+                  child: const Text('Pg 2'),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context,'/Page3');
+                  },
+                  child: const Text('Pg 3'),
+                ),                 
                 ElevatedButton(
                   onPressed: () {
                     Navigator.push(
@@ -42,7 +54,7 @@ class StartPage extends StatelessWidget {
                             child: EndPage(),
                             childCurrent: this));
                   },
-                  child: const Text('Go To EndPage'),
+                  child: const Text('EndPage'),
                 ),                
               ],
             ),
