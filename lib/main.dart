@@ -54,6 +54,8 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
         '/StartPage': (context) => const StartPage(),
         '/EndPage': (context) => const EndPage(),
         '/Page1': (context) => const Page1(),
+        '/Page2': (context) => const Page2(),
+        '/Page3': (context) => const Page3(),
       }
     );
   }
