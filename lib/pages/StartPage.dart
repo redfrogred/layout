@@ -14,7 +14,8 @@ class StartPage extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          const Flexible(
+          const Expanded(
+            flex: 2,
             child: Center(
               child: Text('EDEA UI Examples'),
             ),
@@ -43,6 +44,45 @@ class StartPage extends StatelessWidget {
                 ),                 
                 ElevatedButton(
                   onPressed: () {
+                  },
+                  child: const Text('EndPage'),
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.grey, // background
+                  ),
+                ),                
+              ],
+            ),
+          ),
+Flexible(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context,'/Page4');
+                  },
+                  child: const Text('Pg 4'),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context,'/Page5');
+                  },
+                  child: const Text('Pg 5'),
+                  style: ElevatedButton.styleFrom(
+                    //primary: Colors.grey, // background
+                  ),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context,'/Page6');
+                  },
+                  child: const Text('Pg 6'),
+                  style: ElevatedButton.styleFrom(
+                    //primary: Colors.grey, // background
+                  ),
+                ),                 
+                ElevatedButton(
+                  onPressed: () {
                     Navigator.push(
                         context,
                         PageTransition(
@@ -59,6 +99,7 @@ class StartPage extends StatelessWidget {
               ],
             ),
           ),
+
         ],
       ),
     );
